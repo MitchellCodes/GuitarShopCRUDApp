@@ -19,7 +19,7 @@ namespace GuitarShopCRUDApp
 
         private void GuitarShop_Load(object sender, EventArgs e)
         {
-            List<Product> allProducts = GetAllProducts();
+            List<Product> allProducts = ProductDb.GetAllProducts();
 
             cboProduct.DataSource = allProducts;
             // without to string method: compiler gets the string reference of property
