@@ -8,7 +8,7 @@ namespace GuitarShopCRUDApp
 {
     static class ProductDb
     {
-        private static List<Product> GetAllProducts()
+        public static List<Product> GetAllProducts()
         {
             // instance of database context class to talk to database
             GuitarShopContext context = new GuitarShopContext();
