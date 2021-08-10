@@ -31,12 +31,14 @@ namespace GuitarShopCRUDApp
                  orderby product.ProductName
                  select product).ToList();
 
-            // put into combo box
-            foreach (Product product in allProducts)
-            {
-                // populate list in the combo box for products
-                cboProduct.Items.Add(product);
-            }
+            //// put into combo box
+            //foreach (Product product in allProducts)
+            //{
+            //    // populate list in the combo box for products
+            //    cboProduct.Items.Add(product);
+            //}
+
+            cboProduct.DataSource = allProducts;
         }
     }
 }
