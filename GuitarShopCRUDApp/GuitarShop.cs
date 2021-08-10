@@ -39,6 +39,8 @@ namespace GuitarShopCRUDApp
             //}
 
             cboProduct.DataSource = allProducts;
+            // without to string method: compiler gets the string reference of property
+            cboProduct.DisplayMember = nameof(Product.ProductName); 
         }
     }
 }
