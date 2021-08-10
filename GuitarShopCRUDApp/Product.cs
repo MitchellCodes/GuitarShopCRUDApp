@@ -42,11 +42,5 @@ namespace GuitarShopCRUDApp
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderItem> OrderItems { get; set; }
-
-        //// to string method
-        //public override string ToString()
-        //{
-        //    return ProductName;
-        //}
     }
 }
