@@ -19,6 +19,15 @@ namespace GuitarShopCRUDApp
 
         private void GuitarShop_Load(object sender, EventArgs e)
         {
+            List<Product> allProducts = GetAllProducts();
+
+            cboProduct.DataSource = allProducts;
+            // without to string method: compiler gets the string reference of property
+            cboProduct.DisplayMember = nameof(Product.ProductName);
+        }
+
+        private static List<Product> GetAllProducts()
+        {
             // instance of database context class to talk to database
             GuitarShopContext context = new GuitarShopContext();
 
@@ -30,10 +39,7 @@ namespace GuitarShopCRUDApp
                 (from product in context.Products // wrap with () to get list of products
                  orderby product.ProductName
                  select product).ToList();
-
-            cboProduct.DataSource = allProducts;
-            // without to string method: compiler gets the string reference of property
-            cboProduct.DisplayMember = nameof(Product.ProductName); 
+            return allProducts;
         }
     }
 }
