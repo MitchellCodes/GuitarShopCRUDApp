@@ -26,17 +26,7 @@ namespace GuitarShopCRUDApp
             cboProduct.DisplayMember = nameof(Product.ProductName);
 
 
-
-
-            GuitarShopContext context = new GuitarShopContext();
-
-            // log queries to output
-            //context.Database.Log = Console.WriteLine;
-
-            List<Customer> allCustomers =
-                (from c in context.Customers
-                 orderby c.LastName
-                 select c).ToList();
+            List<Customer> allCustomers = CustomerDb.GetAllCustomers();
 
             cboCustomer.DataSource = allCustomers;
             cboCustomer.DisplayMember = nameof(Customer.FullCustomerName);
