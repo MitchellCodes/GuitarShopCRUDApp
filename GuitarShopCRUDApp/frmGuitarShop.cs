@@ -24,6 +24,12 @@ namespace GuitarShopCRUDApp
             cboProduct.DataSource = allProducts;
             // without to string method: compiler gets the string reference of property
             cboProduct.DisplayMember = nameof(Product.ProductName);
+
+
+            List<Customer> allCustomers = CustomerDb.GetAllCustomers();
+
+            cboCustomer.DataSource = allCustomers;
+            cboCustomer.DisplayMember = nameof(Customer.FullCustomerName);
         }
 
         private void BtnAddProduct_Click(object sender, EventArgs e)
