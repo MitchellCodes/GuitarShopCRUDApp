@@ -39,6 +39,7 @@ namespace GuitarShopCRUDApp
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.txtListPrice = new System.Windows.Forms.TextBox();
             this.txtDiscPercent = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -121,11 +122,21 @@ namespace GuitarShopCRUDApp
             this.txtDiscPercent.Size = new System.Drawing.Size(276, 31);
             this.txtDiscPercent.TabIndex = 9;
             // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(268, 425);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(248, 45);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
             // frmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 482);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtDiscPercent);
             this.Controls.Add(this.txtListPrice);
             this.Controls.Add(this.txtDescription);
@@ -155,5 +166,6 @@ namespace GuitarShopCRUDApp
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.TextBox txtListPrice;
         private System.Windows.Forms.TextBox txtDiscPercent;
+        private System.Windows.Forms.Button btnAdd;
     }
 }
