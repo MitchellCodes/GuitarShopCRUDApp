@@ -34,11 +34,11 @@ namespace GuitarShopCRUDApp
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtProductCode = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtListPrice = new System.Windows.Forms.TextBox();
+            this.txtDiscPercent = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -86,51 +86,51 @@ namespace GuitarShopCRUDApp
             this.label5.TabIndex = 4;
             this.label5.Text = "Discount Percent:";
             // 
-            // textBox1
+            // txtProductCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(240, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 31);
-            this.textBox1.TabIndex = 5;
+            this.txtProductCode.Location = new System.Drawing.Point(240, 19);
+            this.txtProductCode.Name = "txtProductCode";
+            this.txtProductCode.Size = new System.Drawing.Size(276, 31);
+            this.txtProductCode.TabIndex = 5;
             // 
-            // textBox2
+            // txtProductName
             // 
-            this.textBox2.Location = new System.Drawing.Point(240, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(276, 31);
-            this.textBox2.TabIndex = 6;
+            this.txtProductName.Location = new System.Drawing.Point(240, 88);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(276, 31);
+            this.txtProductName.TabIndex = 6;
             // 
-            // textBox3
+            // txtDescription
             // 
-            this.textBox3.Location = new System.Drawing.Point(240, 170);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(276, 31);
-            this.textBox3.TabIndex = 7;
+            this.txtDescription.Location = new System.Drawing.Point(240, 170);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(276, 31);
+            this.txtDescription.TabIndex = 7;
             // 
-            // textBox4
+            // txtListPrice
             // 
-            this.textBox4.Location = new System.Drawing.Point(240, 260);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(276, 31);
-            this.textBox4.TabIndex = 8;
+            this.txtListPrice.Location = new System.Drawing.Point(240, 260);
+            this.txtListPrice.Name = "txtListPrice";
+            this.txtListPrice.Size = new System.Drawing.Size(276, 31);
+            this.txtListPrice.TabIndex = 8;
             // 
-            // textBox5
+            // txtDiscPercent
             // 
-            this.textBox5.Location = new System.Drawing.Point(240, 346);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(276, 31);
-            this.textBox5.TabIndex = 9;
+            this.txtDiscPercent.Location = new System.Drawing.Point(240, 346);
+            this.txtDiscPercent.Name = "txtDiscPercent";
+            this.txtDiscPercent.Size = new System.Drawing.Size(276, 31);
+            this.txtDiscPercent.TabIndex = 9;
             // 
             // frmAddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 482);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDiscPercent);
+            this.Controls.Add(this.txtListPrice);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtProductName);
+            this.Controls.Add(this.txtProductCode);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -150,10 +150,10 @@ namespace GuitarShopCRUDApp
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtProductCode;
+        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.TextBox txtListPrice;
+        private System.Windows.Forms.TextBox txtDiscPercent;
     }
 }
