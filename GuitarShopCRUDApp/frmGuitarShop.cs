@@ -38,10 +38,8 @@ namespace GuitarShopCRUDApp
                  orderby c.LastName
                  select c).ToList();
 
-            foreach (Customer c in allCustomers)
-            {
-                cboCustomer.Items.Add(c);
-            }
+            cboCustomer.DataSource = allCustomers;
+            cboCustomer.DisplayMember = nameof(Customer.FullCustomerName);
         }
 
         private void BtnAddProduct_Click(object sender, EventArgs e)
