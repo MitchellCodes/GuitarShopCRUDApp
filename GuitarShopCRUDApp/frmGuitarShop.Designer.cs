@@ -1,7 +1,7 @@
 ﻿
 namespace GuitarShopCRUDApp
 {
-    partial class GuitarShop
+    partial class frmGuitarShop
     {
         /// <summary>
         /// Required designer variable.
@@ -88,6 +88,7 @@ namespace GuitarShopCRUDApp
             this.btnAddProduct.TabIndex = 5;
             this.btnAddProduct.Text = "Add Product";
             this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.BtnAddProduct_Click);
             // 
             // GuitarShop
             // 

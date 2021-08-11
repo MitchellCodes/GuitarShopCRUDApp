@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GuitarShopCRUDApp
 {
-    public partial class GuitarShop : Form
+    public partial class frmGuitarShop : Form
     {
-        public GuitarShop()
+        public frmGuitarShop()
         {
             InitializeComponent();
         }
@@ -24,6 +24,13 @@ namespace GuitarShopCRUDApp
             cboProduct.DataSource = allProducts;
             // without to string method: compiler gets the string reference of property
             cboProduct.DisplayMember = nameof(Product.ProductName);
+        }
+
+        private void BtnAddProduct_Click(object sender, EventArgs e)
+        {
+            // create instance of frmAddProduct
+            frmAddProduct addForm = new frmAddProduct();
+            addForm.ShowDialog();
         }
     }
 }
