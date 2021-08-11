@@ -81,6 +81,9 @@
     <Compile Include="ProductDb.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddProduct.resx">
+      <DependentUpon>frmAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GuitarShop.resx">
       <DependentUpon>GuitarShop.cs</DependentUpon>
     </EmbeddedResource>
