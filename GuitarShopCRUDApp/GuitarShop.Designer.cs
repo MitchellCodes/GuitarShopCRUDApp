@@ -33,6 +33,8 @@ namespace GuitarShopCRUDApp
             this.label2 = new System.Windows.Forms.Label();
             this.cboCustomer = new System.Windows.Forms.ComboBox();
             this.cboProduct = new System.Windows.Forms.ComboBox();
+            this.btnAddCustomer = new System.Windows.Forms.Button();
+            this.btnAddProduct = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,11 +71,31 @@ namespace GuitarShopCRUDApp
             this.cboProduct.Size = new System.Drawing.Size(376, 33);
             this.cboProduct.TabIndex = 3;
             // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.Location = new System.Drawing.Point(97, 358);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(195, 41);
+            this.btnAddCustomer.TabIndex = 4;
+            this.btnAddCustomer.Text = "Add Customer";
+            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.Location = new System.Drawing.Point(380, 358);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(195, 41);
+            this.btnAddProduct.TabIndex = 5;
+            this.btnAddProduct.Text = "Add Product";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            // 
             // GuitarShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(664, 450);
+            this.Controls.Add(this.btnAddProduct);
+            this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.cboProduct);
             this.Controls.Add(this.cboCustomer);
             this.Controls.Add(this.label2);
@@ -92,6 +114,8 @@ namespace GuitarShopCRUDApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboCustomer;
         private System.Windows.Forms.ComboBox cboProduct;
+        private System.Windows.Forms.Button btnAddCustomer;
+        private System.Windows.Forms.Button btnAddProduct;
     }
 }
 
