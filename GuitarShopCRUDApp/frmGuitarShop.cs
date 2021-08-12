@@ -38,5 +38,11 @@ namespace GuitarShopCRUDApp
             frmAddProduct addForm = new frmAddProduct();
             addForm.ShowDialog();
         }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            frmAddCustomer addCustomerForm = new frmAddCustomer();
+            addCustomerForm.ShowDialog();
+        }
     }
 }

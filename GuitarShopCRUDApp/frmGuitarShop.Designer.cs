@@ -40,68 +40,76 @@ namespace GuitarShopCRUDApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 59);
+            this.label1.Location = new System.Drawing.Point(6, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 25);
+            this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Customer Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 226);
+            this.label2.Location = new System.Drawing.Point(6, 118);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 25);
+            this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Product Name:";
             // 
             // cboCustomer
             // 
             this.cboCustomer.FormattingEnabled = true;
-            this.cboCustomer.Location = new System.Drawing.Point(199, 56);
+            this.cboCustomer.Location = new System.Drawing.Point(100, 29);
+            this.cboCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboCustomer.Name = "cboCustomer";
-            this.cboCustomer.Size = new System.Drawing.Size(376, 33);
+            this.cboCustomer.Size = new System.Drawing.Size(190, 21);
             this.cboCustomer.TabIndex = 2;
             // 
             // cboProduct
             // 
             this.cboProduct.FormattingEnabled = true;
-            this.cboProduct.Location = new System.Drawing.Point(199, 223);
+            this.cboProduct.Location = new System.Drawing.Point(100, 116);
+            this.cboProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboProduct.Name = "cboProduct";
-            this.cboProduct.Size = new System.Drawing.Size(376, 33);
+            this.cboProduct.Size = new System.Drawing.Size(190, 21);
             this.cboProduct.TabIndex = 3;
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(97, 358);
+            this.btnAddCustomer.Location = new System.Drawing.Point(48, 186);
+            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(195, 41);
+            this.btnAddCustomer.Size = new System.Drawing.Size(98, 21);
             this.btnAddCustomer.TabIndex = 4;
             this.btnAddCustomer.Text = "Add Customer";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // btnAddProduct
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(380, 358);
+            this.btnAddProduct.Location = new System.Drawing.Point(190, 186);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(195, 41);
+            this.btnAddProduct.Size = new System.Drawing.Size(98, 21);
             this.btnAddProduct.TabIndex = 5;
             this.btnAddProduct.Text = "Add Product";
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.BtnAddProduct_Click);
             // 
-            // GuitarShop
+            // frmGuitarShop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 450);
+            this.ClientSize = new System.Drawing.Size(332, 234);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.cboProduct);
             this.Controls.Add(this.cboCustomer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "GuitarShop";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmGuitarShop";
             this.Text = "Guitar Shop";
             this.Load += new System.EventHandler(this.GuitarShop_Load);
             this.ResumeLayout(false);
