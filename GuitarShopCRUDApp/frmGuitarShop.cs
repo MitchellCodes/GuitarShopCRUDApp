@@ -26,8 +26,9 @@ namespace GuitarShopCRUDApp
             cboProduct.DisplayMember = nameof(Product.ProductName);
 
 
+            // get all customers from database
             List<Customer> allCustomers = CustomerDb.GetAllCustomers();
-
+            // display all customers in the customer combo box on frmGuitarShop
             cboCustomer.DataSource = allCustomers;
             cboCustomer.DisplayMember = nameof(Customer.FullCustomerName);
         }
@@ -41,6 +42,7 @@ namespace GuitarShopCRUDApp
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
+            // create instance of frmAddCustomer and show it
             frmAddCustomer addCustomerForm = new frmAddCustomer();
             addCustomerForm.ShowDialog();
         }
