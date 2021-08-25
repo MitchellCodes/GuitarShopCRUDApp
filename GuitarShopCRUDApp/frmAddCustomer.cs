@@ -32,6 +32,9 @@ namespace GuitarShopCRUDApp
             Customer customerToAdd = new Customer();
 
             customerToAdd.EmailAddress = txtEmailAddress.Text;
+            customerToAdd.Password = txtPassword.Text; // NEED TO REFACTOR AND NOT STORE AS PLAIN TEXT
+            customerToAdd.FirstName = txtFirstName.Text;
+            customerToAdd.LastName = txtLastName.Text;
         }
     }
 }
