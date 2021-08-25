@@ -82,6 +82,7 @@
       <DependentUpon>frmGuitarShop.cs</DependentUpon>
     </Compile>
     <Compile Include="GuitarShopContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
     <Compile Include="Product.cs" />
