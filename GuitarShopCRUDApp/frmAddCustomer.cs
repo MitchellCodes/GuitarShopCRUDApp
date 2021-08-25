@@ -16,5 +16,15 @@ namespace GuitarShopCRUDApp
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Closes the current form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
