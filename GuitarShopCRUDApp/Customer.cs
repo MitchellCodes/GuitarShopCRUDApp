@@ -46,6 +46,8 @@ namespace GuitarShopCRUDApp
 
 
         // Not auto generated below
+        public string Salt { get; set; }
+
         [NotMapped]
         public string FullCustomerName
         {
