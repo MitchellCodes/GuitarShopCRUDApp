@@ -90,6 +90,14 @@
     <Compile Include="Migrations\202108251119454_UpdatePasswordLength.designer.cs">
       <DependentUpon>202108251119454_UpdatePasswordLength.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202108261058047_AddedSalt.cs" />
+    <Compile Include="Migrations\202108261058047_AddedSalt.designer.cs">
+      <DependentUpon>202108261058047_AddedSalt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108261100541_SetSaltLength.cs" />
+    <Compile Include="Migrations\202108261100541_SetSaltLength.designer.cs">
+      <DependentUpon>202108261100541_SetSaltLength.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
@@ -111,6 +119,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108251119454_UpdatePasswordLength.resx">
       <DependentUpon>202108251119454_UpdatePasswordLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108261058047_AddedSalt.resx">
+      <DependentUpon>202108261058047_AddedSalt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108261100541_SetSaltLength.resx">
+      <DependentUpon>202108261100541_SetSaltLength.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
