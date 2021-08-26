@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,6 +36,16 @@ namespace GuitarShopCRUDApp
             customerToAdd.Password = txtPassword.Text; // NEED TO REFACTOR AND NOT STORE AS PLAIN TEXT
             customerToAdd.FirstName = txtFirstName.Text;
             customerToAdd.LastName = txtLastName.Text;
+        }
+
+        private string GenerateSalt()
+        {
+            byte[] salt = new byte[128 / 8];
+            using (var rngCsp = new RNGCryptoServiceProvider())
+            {
+                rngCsp.GetNonZeroBytes(salt);
+            }
+            return Convert.ToBase64String(salt);
         }
     }
 }
