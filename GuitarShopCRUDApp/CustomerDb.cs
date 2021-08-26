@@ -21,5 +21,14 @@ namespace GuitarShopCRUDApp
                  select c).ToList();
             return allCustomers;
         }
+
+        public static void Add(Customer c)
+        {
+            using(GuitarShopContext context = new GuitarShopContext())
+            {
+                context.Customers.Add(c);
+                context.SaveChanges();
+            }
+        }
     }
 }
