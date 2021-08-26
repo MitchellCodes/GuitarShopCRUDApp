@@ -34,7 +34,7 @@ namespace GuitarShopCRUDApp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e) // need validation
         {
             Customer customerToAdd = new Customer();
 
@@ -48,6 +48,8 @@ namespace GuitarShopCRUDApp
             customerToAdd.Salt = Convert.ToBase64String(customerSalt);
 
             CustomerDb.Add(customerToAdd);
+            MessageBox.Show("Customer added"); // add a check to display appropriate message
+            this.Close();
         }
 
 
