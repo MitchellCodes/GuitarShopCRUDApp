@@ -46,7 +46,13 @@ namespace GuitarShopCRUDApp
 
             customerToAdd.Password = HashPassword(customerSalt);
             customerToAdd.Salt = Convert.ToBase64String(customerSalt);
+
+            CustomerDb.Add(customerToAdd);
         }
+
+
+
+        // BELOW ARE HELPER METHODS
 
         /// <summary>
         /// Generates a random 128-bit salt as a byte array containing
