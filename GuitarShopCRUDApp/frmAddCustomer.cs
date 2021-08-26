@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,22 +39,42 @@ namespace GuitarShopCRUDApp
             Customer customerToAdd = new Customer();
 
             customerToAdd.EmailAddress = txtEmailAddress.Text;
-            customerToAdd.Password = txtPassword.Text; // NEED TO REFACTOR AND NOT STORE AS PLAIN TEXT
             customerToAdd.FirstName = txtFirstName.Text;
             customerToAdd.LastName = txtLastName.Text;
+
+            byte[] customerSalt = GenerateSalt();
+
+            customerToAdd.Password = HashPassword(customerSalt);
+            customerToAdd.Salt = Convert.ToBase64String(customerSalt);
         }
 
         /// <summary>
-        /// Generates a random 128-bit salt
+        /// Generates a random 128-bit salt as a byte array containing
+        /// a random sequence of nonzero values.
         /// </summary>
-        private string GenerateSalt()
+        private byte[] GenerateSalt()
         {
             byte[] salt = new byte[128 / 8];
             using (var rngCsp = new RNGCryptoServiceProvider())
             {
                 rngCsp.GetNonZeroBytes(salt);
             }
-            return Convert.ToBase64String(salt);
+            return salt;
+        }
+
+        /// <summary>
+        /// Salts and hashes the user's password using SHA256 hashing to store in the database.
+        /// </summary>
+        /// <param name="salt">The customer's salt</param>
+        private string HashPassword(byte[] salt)
+        {
+            string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
+                password: txtPassword.Text,
+                salt: salt,
+                prf: KeyDerivationPrf.HMACSHA256,
+                iterationCount: 1000,
+                numBytesRequested: 256 / 8));
+            return hashed;
         }
     }
 }
