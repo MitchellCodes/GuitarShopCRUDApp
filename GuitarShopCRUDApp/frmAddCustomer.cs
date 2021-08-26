@@ -28,6 +28,11 @@ namespace GuitarShopCRUDApp
             this.Close();
         }
 
+        /// <summary>
+        /// Adds a new customer to the Customers table in the database
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Customer customerToAdd = new Customer();
@@ -38,6 +43,9 @@ namespace GuitarShopCRUDApp
             customerToAdd.LastName = txtLastName.Text;
         }
 
+        /// <summary>
+        /// Generates a random 128-bit salt
+        /// </summary>
         private string GenerateSalt()
         {
             byte[] salt = new byte[128 / 8];
