@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,6 +36,17 @@ namespace GuitarShopCRUDApp
             using(GuitarShopContext context = new GuitarShopContext())
             {
                 context.Customers.Add(c);
+                context.SaveChanges();
+            }
+        }
+
+        public static void Update(Customer c)
+        {
+            using(var context = new GuitarShopContext())
+            {
+                //context.Database.Log = Console.WriteLine;
+
+                context.Entry(c).State = EntityState.Modified;
                 context.SaveChanges();
             }
         }
