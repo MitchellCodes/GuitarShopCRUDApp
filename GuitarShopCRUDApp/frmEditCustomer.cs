@@ -20,11 +20,22 @@ namespace GuitarShopCRUDApp
             txtLastName.Text = c.LastName;
         }
 
+        /// <summary>
+        /// Updates the information of the customer that was passed into
+        /// this form's constructor
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnEditCustomer_Click(object sender, EventArgs e)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Closes the current form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
