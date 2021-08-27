@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,16 +15,14 @@ namespace GuitarShopCRUDApp
         /// </summary>
         public static List<Customer> GetAllCustomers()
         {
-            GuitarShopContext context = new GuitarShopContext();
-
-            // log queries to output
-            //context.Database.Log = Console.WriteLine;
-
-            List<Customer> allCustomers =
+            using(GuitarShopContext context = new GuitarShopContext())
+            {
+                List<Customer> allCustomers =
                 (from c in context.Customers
                  orderby c.LastName
                  select c).ToList();
-            return allCustomers;
+                return allCustomers;
+            }
         }
 
         /// <summary>
@@ -35,6 +34,21 @@ namespace GuitarShopCRUDApp
             using(GuitarShopContext context = new GuitarShopContext())
             {
                 context.Customers.Add(c);
+                context.SaveChanges();
+            }
+        }
+
+        /// <summary>
+        /// Updates a customer's information in the database.
+        /// </summary>
+        /// <param name="c">The customer with the new information</param>
+        public static void Update(Customer c)
+        {
+            using(var context = new GuitarShopContext())
+            {
+                //context.Database.Log = Console.WriteLine;
+
+                context.Entry(c).State = EntityState.Modified;
                 context.SaveChanges();
             }
         }

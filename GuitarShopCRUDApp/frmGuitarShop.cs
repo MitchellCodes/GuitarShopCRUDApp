@@ -40,11 +40,20 @@ namespace GuitarShopCRUDApp
             addForm.ShowDialog();
         }
 
-        private void btnAddCustomer_Click(object sender, EventArgs e)
+        private void BtnAddCustomer_Click(object sender, EventArgs e)
         {
             // create instance of frmAddCustomer and show it
             frmAddCustomer addCustomerForm = new frmAddCustomer();
             addCustomerForm.ShowDialog();
+        }
+
+        private void BtnEditCustomer_Click(object sender, EventArgs e)
+        {
+            // create an instance of frmEditCustomer, pass in the
+            // selected customer, and show the form
+            Customer currentCustomer = (Customer)cboCustomer.SelectedItem;
+            frmEditCustomer editCustomerForm = new frmEditCustomer(currentCustomer);
+            editCustomerForm.ShowDialog();
         }
     }
 }

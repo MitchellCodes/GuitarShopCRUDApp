@@ -22,7 +22,7 @@ namespace GuitarShopCRUDApp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -32,7 +32,7 @@ namespace GuitarShopCRUDApp
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnAdd_Click(object sender, EventArgs e) // need validation
+        private void BtnAdd_Click(object sender, EventArgs e) // need validation
         {
             Customer customerToAdd = new Customer();
 

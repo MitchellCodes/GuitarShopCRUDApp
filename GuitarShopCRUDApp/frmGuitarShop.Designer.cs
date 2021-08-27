@@ -35,6 +35,7 @@ namespace GuitarShopCRUDApp
             this.cboProduct = new System.Windows.Forms.ComboBox();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnEditCustomer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -61,7 +62,7 @@ namespace GuitarShopCRUDApp
             // 
             this.cboCustomer.FormattingEnabled = true;
             this.cboCustomer.Location = new System.Drawing.Point(100, 29);
-            this.cboCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.cboCustomer.Name = "cboCustomer";
             this.cboCustomer.Size = new System.Drawing.Size(190, 21);
             this.cboCustomer.TabIndex = 2;
@@ -70,26 +71,26 @@ namespace GuitarShopCRUDApp
             // 
             this.cboProduct.FormattingEnabled = true;
             this.cboProduct.Location = new System.Drawing.Point(100, 116);
-            this.cboProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboProduct.Margin = new System.Windows.Forms.Padding(2);
             this.cboProduct.Name = "cboProduct";
             this.cboProduct.Size = new System.Drawing.Size(190, 21);
             this.cboProduct.TabIndex = 3;
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(48, 186);
-            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddCustomer.Location = new System.Drawing.Point(11, 158);
+            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(98, 21);
             this.btnAddCustomer.TabIndex = 4;
             this.btnAddCustomer.Text = "Add Customer";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            this.btnAddCustomer.Click += new System.EventHandler(this.BtnAddCustomer_Click);
             // 
             // btnAddProduct
             // 
             this.btnAddProduct.Location = new System.Drawing.Point(190, 186);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(98, 21);
             this.btnAddProduct.TabIndex = 5;
@@ -97,18 +98,29 @@ namespace GuitarShopCRUDApp
             this.btnAddProduct.UseVisualStyleBackColor = true;
             this.btnAddProduct.Click += new System.EventHandler(this.BtnAddProduct_Click);
             // 
+            // btnEditCustomer
+            // 
+            this.btnEditCustomer.Location = new System.Drawing.Point(11, 199);
+            this.btnEditCustomer.Name = "btnEditCustomer";
+            this.btnEditCustomer.Size = new System.Drawing.Size(98, 21);
+            this.btnEditCustomer.TabIndex = 6;
+            this.btnEditCustomer.Text = "Edit Customer";
+            this.btnEditCustomer.UseVisualStyleBackColor = true;
+            this.btnEditCustomer.Click += new System.EventHandler(this.BtnEditCustomer_Click);
+            // 
             // frmGuitarShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 234);
+            this.Controls.Add(this.btnEditCustomer);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.cboProduct);
             this.Controls.Add(this.cboCustomer);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGuitarShop";
             this.Text = "Guitar Shop";
             this.Load += new System.EventHandler(this.GuitarShop_Load);
@@ -125,6 +137,7 @@ namespace GuitarShopCRUDApp
         private System.Windows.Forms.ComboBox cboProduct;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button btnEditCustomer;
     }
 }
 
