@@ -22,7 +22,7 @@ namespace GuitarShopCRUDApp
         public string EmailAddress { get; set; }
 
         [Required]
-        [StringLength(60)]
+        [StringLength(64)]
         public string Password { get; set; }
 
         [Required]
@@ -46,6 +46,10 @@ namespace GuitarShopCRUDApp
 
 
         // Not auto generated below
+        [StringLength(32)]
+        public string Salt { get; set; }
+
+        [NotMapped]
         public string FullCustomerName
         {
             get

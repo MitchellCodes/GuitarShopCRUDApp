@@ -42,6 +42,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.Internal, Version=5.0.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.Internal.5.0.9\lib\net461\Microsoft.AspNetCore.Cryptography.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation, Version=5.0.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.Cryptography.KeyDerivation.5.0.9\lib\net461\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -63,6 +69,7 @@
     <Compile Include="Category.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerDb.cs" />
+    <Compile Include="CustomerHelper.cs" />
     <Compile Include="frmAddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +82,12 @@
     <Compile Include="frmAddProduct.Designer.cs">
       <DependentUpon>frmAddProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditCustomer.Designer.cs">
+      <DependentUpon>frmEditCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGuitarShop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +95,23 @@
       <DependentUpon>frmGuitarShop.cs</DependentUpon>
     </Compile>
     <Compile Include="GuitarShopContext.cs" />
+    <Compile Include="Migrations\202108251118411_InitialCreate.cs" />
+    <Compile Include="Migrations\202108251118411_InitialCreate.designer.cs">
+      <DependentUpon>202108251118411_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108251119454_UpdatePasswordLength.cs" />
+    <Compile Include="Migrations\202108251119454_UpdatePasswordLength.designer.cs">
+      <DependentUpon>202108251119454_UpdatePasswordLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108261058047_AddedSalt.cs" />
+    <Compile Include="Migrations\202108261058047_AddedSalt.designer.cs">
+      <DependentUpon>202108261058047_AddedSalt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108261100541_SetSaltLength.cs" />
+    <Compile Include="Migrations\202108261100541_SetSaltLength.designer.cs">
+      <DependentUpon>202108261100541_SetSaltLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderItem.cs" />
     <Compile Include="Product.cs" />
@@ -96,6 +126,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGuitarShop.resx">
       <DependentUpon>frmGuitarShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108251118411_InitialCreate.resx">
+      <DependentUpon>202108251118411_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108251119454_UpdatePasswordLength.resx">
+      <DependentUpon>202108251119454_UpdatePasswordLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108261058047_AddedSalt.resx">
+      <DependentUpon>202108261058047_AddedSalt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108261100541_SetSaltLength.resx">
+      <DependentUpon>202108261100541_SetSaltLength.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
