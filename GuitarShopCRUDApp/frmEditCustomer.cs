@@ -12,12 +12,15 @@ namespace GuitarShopCRUDApp
 {
     public partial class frmEditCustomer : Form
     {
+        private Customer CurrentCustomer { get; set; }
+
         public frmEditCustomer(Customer c)
         {
             InitializeComponent();
-            txtEmailAddress.Text = c.EmailAddress;
-            txtFirstName.Text = c.FirstName;
-            txtLastName.Text = c.LastName;
+            CurrentCustomer = c;
+            txtEmailAddress.Text = CurrentCustomer.EmailAddress;
+            txtFirstName.Text = CurrentCustomer.FirstName;
+            txtLastName.Text = CurrentCustomer.LastName;
         }
 
         /// <summary>
@@ -28,7 +31,20 @@ namespace GuitarShopCRUDApp
         /// <param name="e"></param>
         private void BtnEditCustomer_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Customer updatedCustomer = CurrentCustomer;
+            updatedCustomer.EmailAddress = txtEmailAddress.Text;
+            updatedCustomer.FirstName = txtFirstName.Text;
+            updatedCustomer.LastName = txtLastName.Text;
+
+            // update password if textbox is not empty
+            if (txtPassword.Text != "")
+            {
+                byte[] salt = CustomerHelper.GenerateSalt();
+                updatedCustomer.Password = CustomerHelper.HashPassword(salt, txtPassword.Text);
+                updatedCustomer.Salt = Convert.ToBase64String(salt);
+            }
+
+            CustomerDb.Update(updatedCustomer);
         }
 
         /// <summary>
