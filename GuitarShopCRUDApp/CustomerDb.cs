@@ -38,6 +38,10 @@ namespace GuitarShopCRUDApp
             }
         }
 
+        /// <summary>
+        /// Updates a customer's information in the database.
+        /// </summary>
+        /// <param name="c">The customer with the new information</param>
         public static void Update(Customer c)
         {
             using(var context = new GuitarShopContext())
