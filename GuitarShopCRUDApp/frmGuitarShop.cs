@@ -49,7 +49,11 @@ namespace GuitarShopCRUDApp
 
         private void BtnEditCustomer_Click(object sender, EventArgs e)
         {
-
+            // create an instance of frmEditCustomer, pass in the
+            // selected customer, and show the form
+            Customer currentCustomer = (Customer)cboCustomer.SelectedItem;
+            frmEditCustomer editCustomerForm = new frmEditCustomer(currentCustomer);
+            editCustomerForm.ShowDialog();
         }
     }
 }
