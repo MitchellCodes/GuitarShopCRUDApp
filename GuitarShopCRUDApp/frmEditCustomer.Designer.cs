@@ -59,6 +59,7 @@ namespace GuitarShopCRUDApp
             this.BtnCancel.TabIndex = 1;
             this.BtnCancel.Text = "Cancel";
             this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // label1
             // 
@@ -126,8 +127,10 @@ namespace GuitarShopCRUDApp
             // 
             // frmEditCustomer
             // 
+            this.AcceptButton = this.BtnEditCustomer;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(358, 307);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);

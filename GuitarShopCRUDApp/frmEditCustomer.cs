@@ -21,5 +21,10 @@ namespace GuitarShopCRUDApp
         {
             throw new NotImplementedException();
         }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
