@@ -15,16 +15,14 @@ namespace GuitarShopCRUDApp
         /// </summary>
         public static List<Customer> GetAllCustomers()
         {
-            GuitarShopContext context = new GuitarShopContext();
-
-            // log queries to output
-            //context.Database.Log = Console.WriteLine;
-
-            List<Customer> allCustomers =
+            using(GuitarShopContext context = new GuitarShopContext())
+            {
+                List<Customer> allCustomers =
                 (from c in context.Customers
                  orderby c.LastName
                  select c).ToList();
-            return allCustomers;
+                return allCustomers;
+            }
         }
 
         /// <summary>
