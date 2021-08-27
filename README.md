@@ -19,11 +19,12 @@ A team project for Advanced .NET to practice source control
     4.) Pull Request
     5.) Merge back into the main branch
     
-## Prerequisite 
+## Prerequisites 
 
 - [Visual Studio IDE](https://visualstudio.microsoft.com/)
 - [Windows Forms App C# (.NET Framework)](https://docs.microsoft.com/en-us/visualstudio/ide/create-csharp-winform-visual-studio?view=vs-2019)
 - [Entity Framework 6 (EF6)](https://docs.microsoft.com/en-us/ef/ef6/)
+- MyGuitarShop database installed in (localdb)\MSSQLLocalDB
 
 
         
