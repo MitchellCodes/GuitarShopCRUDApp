@@ -15,6 +15,9 @@ namespace GuitarShopCRUDApp
         public frmEditCustomer(Customer c)
         {
             InitializeComponent();
+            txtEmailAddress.Text = c.EmailAddress;
+            txtFirstName.Text = c.FirstName;
+            txtLastName.Text = c.LastName;
         }
 
         private void BtnEditCustomer_Click(object sender, EventArgs e)
