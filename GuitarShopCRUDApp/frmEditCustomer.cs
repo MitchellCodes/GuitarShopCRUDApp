@@ -45,6 +45,8 @@ namespace GuitarShopCRUDApp
             }
 
             CustomerDb.Update(updatedCustomer);
+            MessageBox.Show("Customer updated");
+            this.Close();
         }
 
         /// <summary>
