@@ -40,9 +40,9 @@ namespace GuitarShopCRUDApp
             customerToAdd.FirstName = txtFirstName.Text;
             customerToAdd.LastName = txtLastName.Text;
 
-            byte[] customerSalt = GenerateSalt();
+            byte[] customerSalt = CustomerHelper.GenerateSalt();
 
-            customerToAdd.Password = HashPassword(customerSalt, txtPassword.Text);
+            customerToAdd.Password = CustomerHelper.HashPassword(customerSalt, txtPassword.Text);
             customerToAdd.Salt = Convert.ToBase64String(customerSalt);
 
             CustomerDb.Add(customerToAdd);
