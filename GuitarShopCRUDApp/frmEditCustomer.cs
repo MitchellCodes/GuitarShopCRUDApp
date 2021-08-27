@@ -12,9 +12,14 @@ namespace GuitarShopCRUDApp
 {
     public partial class frmEditCustomer : Form
     {
-        public frmEditCustomer()
+        public frmEditCustomer(Customer c)
         {
             InitializeComponent();
+        }
+
+        private void BtnEditCustomer_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
