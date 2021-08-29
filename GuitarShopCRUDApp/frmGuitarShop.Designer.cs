@@ -36,6 +36,7 @@ namespace GuitarShopCRUDApp
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnAddProduct = new System.Windows.Forms.Button();
             this.btnEditCustomer = new System.Windows.Forms.Button();
+            this.btnDeleteCustomer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +79,7 @@ namespace GuitarShopCRUDApp
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(11, 158);
+            this.btnAddCustomer.Location = new System.Drawing.Point(9, 160);
             this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(98, 21);
@@ -100,7 +101,7 @@ namespace GuitarShopCRUDApp
             // 
             // btnEditCustomer
             // 
-            this.btnEditCustomer.Location = new System.Drawing.Point(11, 199);
+            this.btnEditCustomer.Location = new System.Drawing.Point(9, 188);
             this.btnEditCustomer.Name = "btnEditCustomer";
             this.btnEditCustomer.Size = new System.Drawing.Size(98, 21);
             this.btnEditCustomer.TabIndex = 6;
@@ -108,11 +109,22 @@ namespace GuitarShopCRUDApp
             this.btnEditCustomer.UseVisualStyleBackColor = true;
             this.btnEditCustomer.Click += new System.EventHandler(this.BtnEditCustomer_Click);
             // 
+            // btnDeleteCustomer
+            // 
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(9, 216);
+            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
+            this.btnDeleteCustomer.Size = new System.Drawing.Size(98, 21);
+            this.btnDeleteCustomer.TabIndex = 7;
+            this.btnDeleteCustomer.Text = "Delete Customer";
+            this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.BtnDeleteCustomer_Click);
+            // 
             // frmGuitarShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 234);
+            this.ClientSize = new System.Drawing.Size(332, 252);
+            this.Controls.Add(this.btnDeleteCustomer);
             this.Controls.Add(this.btnEditCustomer);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.btnAddCustomer);
@@ -138,6 +150,7 @@ namespace GuitarShopCRUDApp
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.Button btnEditCustomer;
+        private System.Windows.Forms.Button btnDeleteCustomer;
     }
 }
 

@@ -55,5 +55,24 @@ namespace GuitarShopCRUDApp
             frmEditCustomer editCustomerForm = new frmEditCustomer(currentCustomer);
             editCustomerForm.ShowDialog();
         }
+
+        private void BtnDeleteCustomer_Click(object sender, EventArgs e)
+        {
+            // ask the user if they want to delete the selected customer
+            // and if they confirm then delete them from database
+            Customer currCustomer = (Customer)cboCustomer.SelectedItem;
+
+            DialogResult result = MessageBox.Show(
+                            text: $"Are you sure you want to delete {currCustomer.FirstName} {currCustomer.LastName}?",
+                            caption: "Delete Customer Confirmation",
+                            buttons: MessageBoxButtons.YesNo,
+                            icon: MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                CustomerDb.Delete(currCustomer);
+                MessageBox.Show("Customer deleted"); // add a check to display appropriate message
+            }
+        }
     }
 }
