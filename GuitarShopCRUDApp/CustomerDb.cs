@@ -54,7 +54,7 @@ namespace GuitarShopCRUDApp
         }
 
         /// <summary>
-        /// Deletes a customer's information from that database
+        /// Deletes a customer's information from the database
         /// </summary>
         /// <param name="c"></param>
         public static void Delete(Customer c)
