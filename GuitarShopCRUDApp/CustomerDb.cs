@@ -52,5 +52,18 @@ namespace GuitarShopCRUDApp
                 context.SaveChanges();
             }
         }
+
+        /// <summary>
+        /// Deletes a customer's information from that database
+        /// </summary>
+        /// <param name="c"></param>
+        public static void Delete(Customer c)
+        {
+            using(var context = new GuitarShopContext())
+            {
+                context.Entry(c).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
+        }
     }
 }
