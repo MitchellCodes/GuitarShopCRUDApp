@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,37 @@ namespace GuitarShopCRUDApp
                  orderby product.ProductName
                  select product).ToList();
             return allProducts;
+        }
+
+        public static Product Add(Product p)
+        {
+            using (GuitarShopContext context = new GuitarShopContext())
+            {
+                context.Products.Add(p);
+                context.SaveChanges();
+
+                return p;
+            }
+        }
+
+        public static Product Update(Product p)
+        {
+            using (var context = new GuitarShopContext())
+            {
+                context.Entry(p).State = EntityState.Modified;
+                context.SaveChanges();
+
+                return p;
+            }
+        }
+
+        public static void Delete(Product p)
+        {
+            using (var context = new GuitarShopContext())
+            {
+                context.Entry(p).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
         }
     }
 }
