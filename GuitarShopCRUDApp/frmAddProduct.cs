@@ -56,7 +56,7 @@ namespace GuitarShopCRUDApp
             {
                 ProductDb.Add(newProduct);
                 MessageBox.Show($"{newProduct.ProductName} was successfully added!");
-                // clear current box of data
+                Close();
             }
             else
             {
